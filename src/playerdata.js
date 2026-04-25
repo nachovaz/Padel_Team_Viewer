@@ -2,14 +2,14 @@ export const playerData = [
   {
     id: 254763,
     name: "SERGIO LOPEZ FERNANDEZ",
-    playedMatches: 1,
-    playoffLocked: false
+    playedMatches: 3,
+    playoffLocked: true
   },
   {
     id: 273995,
     name: "DANIEL RODERO RAMOS",
-    playedMatches: 1,
-    playoffLocked: false
+    playedMatches: 2,
+    playoffLocked: true
   },
   {
     id: 366280,
@@ -20,20 +20,20 @@ export const playerData = [
   {
     id: 365611,
     name: "VICTOR HUGO FERNANDEZ SUAREZ",
-    playedMatches: 3,
+    playedMatches: 4,
     playoffLocked: true
   },
   {
     id: 366166,
     name: "DAVID ALONSO FERNANDEZ",
-    playedMatches: 1,
-    playoffLocked: false
+    playedMatches: 3,
+    playoffLocked: true
   },
   {
     id: 366158,
     name: "HORACIO ENRIQUE SUAREZ MARTINEZ",
-    playedMatches: 1,
-    playoffLocked: false
+    playedMatches: 3,
+    playoffLocked: true
   },
   {
     id: 367632,
@@ -44,38 +44,38 @@ export const playerData = [
   {
     id: 367532,
     name: "ISAAC DIEZ QUIROGA",
-    playedMatches: 2,
+    playedMatches: 3,
     playoffLocked: true
   },
   {
     id: 369295,
     name: "JAVIER RODRIGUEZ ALIJA",
-    playedMatches: 3,
+    playedMatches: 4,
     playoffLocked: true
   },
   {
     id: 368061,
     name: "OSCAR FIDALGO DE RABANO",
-    playedMatches: 2,
+    playedMatches: 4,
     playoffLocked: true
   },
   {
     id: 366358,
     name: "JAVIER SANCHEZ NAVA",
-    playedMatches: 2,
+    playedMatches: 3,
     playoffLocked: true
   },
   {
     id: 372147,
     name: "FERNANDO DIAZ PRIETO",
-    playedMatches: 2,
+    playedMatches: 3,
     playoffLocked: true
   },
   {
     id: 366382,
     name: "IGNACIO VAZQUEZ DIAZ",
-    playedMatches: 1,
-    playoffLocked: false
+    playedMatches: 2,
+    playoffLocked: true
   },
   {
     id: 367605,
@@ -86,31 +86,31 @@ export const playerData = [
   {
     id: 394342,
     name: "GABRIEL ADRIAN DURAND CASTILLO",
-    playedMatches: 2,
-    playoffLocked: false
+    playedMatches: 3,
+    playoffLocked: true
   },
   {
     id: 394568,
     name: "ALBERTO BLANCO IGLESIAS",
-    playedMatches: 3,
+    playedMatches: 4,
     playoffLocked: true
   },
   {
     id: 394188,
     name: "SAMUEL FERNANDEZ CUERVO",
-    playedMatches: 1,
-    playoffLocked: false
+    playedMatches: 4,
+    playoffLocked: true
   },
   {
     id: 382130,
     name: "XAVIER REUS FERRES",
-    playedMatches: 2,
-    playoffLocked: false
+    playedMatches: 4,
+    playoffLocked: true
   },
   {
     id: 399273,
     name: "RODRIGO PICO NUÑEZ",
-    playedMatches: 4,
+    playedMatches: 6,
     playoffLocked: true
   },
 ]

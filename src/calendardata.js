@@ -25,28 +25,28 @@ export const calendarData = [
     vs: "SAMO",
     fecha: "15/03 - 10:30",
     lugar: "En casa",
-    resultado: "por determinar"
+    resultado: "Victoria 3-1"
   },
   {
     jornada: 5,
     vs: "Iberpadel",
     fecha: "22/03 - 10:30",
     lugar: "En casa",
-    resultado: "por determinar"
+    resultado: "Derrota 0-4"
   },
   {
     jornada: 6,
     vs: "Atletico Langreo",
     fecha: "12/04 - 10:30",
     lugar: "En casa",
-    resultado: "por determinar"
+    resultado: "Derrota 0-4"
   },
   {
     jornada: 7,
     vs: "GLS",
     fecha: "19/04 - 11:00",
     lugar: "Fuera",
-    resultado: "por determinar"
+    resultado: "Empate 2-2"
   },
   {
     jornada: 8,
