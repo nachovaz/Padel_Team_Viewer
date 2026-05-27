@@ -3,22 +3,45 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="css/style.css" />
         <title>Pecorino</title>
-        <script src="app.js"></script>
-    </head>
+        <script type="module" src="js/index.js"></script>
 
-    <body class="landing-page">
-       <div class="login-container">
-            <img class="logo" src="/assets/padeloviedologo.png"/>
-            <h1 class="login-h1">Welcome Captain!</h1>
-            <p class="login-p">Please log in to access the app</p>
-            
-            <form class="login-form">
-                <input class="form-field" type="text" placeholder="Username" required />
-                <input class="form-field" type="password" placeholder="Password" required />
-                <button class="login-submit-btn" id="login-btn" type="submit">Log In</button>
-            </form>
-            <a class="link-to-main" href="app.html">go to app</a>
-       </div>
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+             integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+             crossorigin="anonymous" 
+             referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <header>
+            <div class="header-title">
+                <h1>Pecorino</h1>
+                <div class="vertical-line"></div>
+                <h1>a padel manager app</h1>
+            </div>
+            <nav class="nav-bar">
+                <button class="nav-btn" id="home-button"><i class="fa-solid fa-house"></i> Home</button>
+                <button class="nav-btn" id="players-button"><i class="fa-solid fa-users"></i> Players</button>
+                <button class="nav-btn" id="calendar-button"><i class="fa-solid fa-calendar-days"></i> Calendar</button>
+            </nav>
+        </header>
+
+        <main id="section-content">
+
+
+        </main>
+
+
+        <template id="home-section-template">
+            <div class="home-container">
+                <h1>Padel Oviedo B</h1>
+                <h2>wee woo wee woo</h2>
+            </div>
+        </template>
+
     </body>
+    <footer>
+        <p>nachovaz side projects</p>
+    </footer>
+</html>

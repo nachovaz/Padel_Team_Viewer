@@ -1,5 +1,5 @@
-import { playerData } from "./playerdata.js";
-import { calendarData } from "./calendardata.js";
+import { playerData } from "../data/playerdata.js";
+import { calendarData } from "../data/calendardata.js";
 
 
 window.addEventListener("DOMContentLoaded", () => {
