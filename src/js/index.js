@@ -32,11 +32,14 @@ function loadSection(section) {
         `
         <div id="home-elements-container">
           <h2 id="home-title">Padel Oviedo B</h2>
-                <div id="weather-holder">
-          <h2>Weather in Oviedo:</h2>
-          <div id="weather-content"></div>
+          
+          <div id="weather-holder">
+            <h2>Weather in Oviedo:</h2>
+            <div id="weather-data"></div>
+          </div>
+          
           <div id="time-next-match">
-            <h2>Next match countdown:</h2>
+            <h2>Next events:</h2>
           </div>
         </div>
         `;
@@ -119,16 +122,13 @@ function fetchWeather() {
       const weather_code = data.current.weather_code
       const icon = weatherIcon(weather_code)
       const weatherDesc = weatherDescription(weather_code)
-      document.getElementById("weather-content").innerHTML =
+      document.getElementById("weather-data").innerHTML =
         `
-          <div class="weather-card">
-            <i class="fa-solid ${icon} weather-icon"></i>
-            <div class="weather-info">
-              <span class="weather-desc">${weatherDesc}</span>
-              <span class="weather-temp"><i class="fa-solid fa-temperature-half"></i> ${temperature_2m}°C</span>
-              <span class="weather-humidity"><i class="fa-solid fa-droplet"></i> ${relative_humidity_2m}%</span>
-            </div>
-          </div>
+              <span class="weather-desc"><i class="fa-solid ${icon} weather-icon"></i>${weatherDesc}</span>
+              <span class="temp-humidity-holder">
+                <span class="weather-temp"><i class="fa-solid fa-temperature-half"></i> ${temperature_2m}°C</span>
+                <span class="weather-humidity"><i class="fa-solid fa-droplet"></i> ${relative_humidity_2m}%</span>  
+              </span>
         `
     })
     .catch(() => {
