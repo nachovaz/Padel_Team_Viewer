@@ -34,7 +34,8 @@ function loadSection(section) {
           <h2 id="team-name">Padel Oviedo B</h2>
 
           <div id="weather-holder">
-            <h2>Weather in Oviedo:</h2>
+            <h2>Conditions</h2>
+            <hr />
             <div id="weather-data"></div>
             <div id="game-conditions">
               <h2>Ball liveliness:</h2>
@@ -46,8 +47,8 @@ function loadSection(section) {
             </div>
           </div>
 
-          <div id="time-next-match">
-            <h2>Next events:</h2>
+          <div id="upcoming-events-holder">
+            <h2>Upcoming events:</h2>
           </div>
         </div>
         `;
