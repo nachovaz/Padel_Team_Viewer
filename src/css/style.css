@@ -137,13 +137,13 @@ main {
 }
 
 #home-elements-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 3fr 2fr;
+    gap: 2.5em;
     width: 90%;
     height: 100%;
-    margin: 1em auto;
-    gap: 0.5em;
+    margin: 0 auto;
+    padding: 3em 0;
     box-sizing: border-box;
     background: none;
 }
@@ -159,8 +159,6 @@ main {
 }
 
 #weather-holder {
-    flex: 5;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -186,7 +184,7 @@ main {
     align-self: center;
     width: 30%;
     padding: 0;
-    margin: 1em;
+    margin: 1em 0 3em 0;
 }
 
 #weather-content-wrapper {
@@ -282,14 +280,11 @@ main {
 }
 
 #upcoming-events-holder {
-    flex: 3;
-    width: 100%;
     box-sizing: border-box;
     background: #a1cca5;
     border: 2px solid #03071e;
     border-radius: 25px;
     box-shadow: 2px 6px 5px #03071e;
-    margin: 1em 0;
 }
 
 #upcoming-events-holder > h2 {
