@@ -33,24 +33,22 @@ function loadSection(section) {
       sectionContent.innerHTML = `
         <div id="home-elements-container">
           <div id="weather-holder">
-            <h2>Conditions</h2>
-            <hr />
-            <div id="weather-content-wrapper">
-              <div id="weather-data"></div>
-              <div id="game-conditions">
-                <h2>Ball liveliness:</h2>
-                <div id="ball-liveliness-bar">
-                  <span id="liveleness-low">LOW</span>
-                  <span id="liveleness-normal">NORMAL</span>
-                  <span id="liveleness-high">HIGH</span>
-                </div>
-              </div>
-            </div>
+            <h2 class="card-title">Conditions</h2>
+            <div id="weather-data"></div>
           </div>
 
           <div id="upcoming-events-holder">
-            <h2>Upcoming events:</h2>
+            <h2 class="card-title">Upcoming events</h2>
             <ul id="upcoming-events-list"></ul>
+          </div>
+
+          <div id="game-conditions">
+            <h2 class="card-title">Ball liveliness</h2>
+            <div id="ball-liveliness-bar">
+              <span id="liveleness-low">LOW</span>
+              <span id="liveleness-normal">NORMAL</span>
+              <span id="liveleness-high">HIGH</span>
+            </div>
           </div>
         </div>
         `;
