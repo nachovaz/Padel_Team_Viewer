@@ -1,6 +1,10 @@
 import { playerData } from "../data/playerdata.js";
 import { calendarData } from "../data/calendardata.js";
-import { BallLiveliness, weatherIcon, weatherDescription } from "./weatherConditions.js";
+import {
+  BallLiveliness,
+  weatherIcon,
+  weatherDescription,
+} from "./weatherConditions.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   const homeBtn = document.getElementById("home-button");
@@ -32,6 +36,7 @@ function loadSection(section) {
     case "home":
       sectionContent.innerHTML = `
         <div id="home-elements-container">
+
           <div id="weather-holder">
             <h2 class="card-title">Conditions</h2>
             <div id="weather-data"></div>
@@ -53,6 +58,7 @@ function loadSection(section) {
         </div>
         `;
       fetchWeather();
+      fetchNextEvents();
       break;
 
     case "players":
@@ -90,11 +96,12 @@ function loadSection(section) {
       let calendarTable = `
           <table class="calendar-data-table">
               <tr>
-                  <th>Jornada</th>
+                  <th>Match Day</th>
                   <th>VS</th>
-                  <th>Fecha/Hora</th>
-                  <th>Lugar</th>
-                  <th>Resultado</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Venue</th>
+                  <th>Result</th>
               </tr>
         `;
       calendarData.forEach(function (matchup) {
@@ -103,6 +110,7 @@ function loadSection(section) {
                   <td>${matchup.jornada}</td>
                   <td>${matchup.vs}</td>
                   <td>${matchup.fecha}</td>
+                  <td>${matchup.hora}</td>
                   <td>${matchup.lugar}</td>
                   <td>${matchup.resultado}</td>
               </tr>
@@ -143,7 +151,37 @@ function fetchWeather() {
         .classList.add("active");
     })
     .catch(() => {
-      document.getElementById("weather-content").innerHTML =
+      document.getElementById("weather-data").innerHTML =
         `<p class="weather-error">Could not load weather</p>`;
     });
+}
+
+//Función para obtener la lista de próximos eventos
+function fetchNextEvents() {
+  const actualDate = new Date();
+  const upcomingEvents = calendarData
+    .map((matchup) => {
+      const [d, m, y] = matchup.fecha.split("/").map(Number);
+      const [h, min] = matchup.hora.split(":").map(Number);
+      return { ...matchup, dateObj: new Date(y, m - 1, d, h, min) };
+    })
+    .filter((matchup) => matchup.dateObj >= actualDate)
+    .sort((a, b) => a.dateObj - b.dateObj)
+    .slice(0, 3);
+
+  const eventList = document.getElementById("upcoming-events-list");
+
+  if (upcomingEvents.length === 0) {
+    eventList.innerHTML = `<li class="no-events">No upcoming events</li>`;
+  } else {
+    upcomingEvents.forEach((match) => {
+      eventList.innerHTML += `
+      <li>
+        vs <span class="event-vs"> ${match.vs} </span>
+        on <span class="event-date"> ${match.fecha.split("/").slice(0, 2).join("/")} </span>
+        at <span class="event-time"> ${match.hora} </span>
+        - <span class="event-place"> ${match.lugar} </span>
+      </li>`;
+    });
+  }
 }

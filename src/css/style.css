@@ -163,10 +163,10 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-color: #2a2a2a;
+    background: rgba(224, 224, 224, 0.1);
+    backdrop-filter: blur(6px);
     border-radius: 25px;
     box-sizing: border-box;
-    box-shadow: 2px 6px 5px rgba(46, 160, 67, 0.35);
     padding: 1.5em 2em;
     min-height: 0;
 }
@@ -175,8 +175,9 @@ main {
     color: #e0e0e0;
     font-size: 3.5em;
     text-align: center;
-    padding: 0 2em;
-    border-bottom: 1px solid #2ea043;
+    padding: 0 1em;
+    border-bottom: 2px solid rgba(224, 224, 224, 0.5);
+    border-style: none none outset none ;
     margin: 0 auto;
 }
 
@@ -229,13 +230,29 @@ main {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        background-color: #2a2a2a;
-        border-radius: 25px;
+        background: rgba(224, 224, 224, 0.1);
+        backdrop-filter: blur(6px);
+            border-radius: 25px;
         box-sizing: border-box;
-        box-shadow: 2px 6px 5px rgba(46, 160, 67, 0.35);
         padding: 1.5em 2em;
         min-height: 0;
 }
+
+#upcoming-events-list {
+    color: #e0e0e0;
+    font-size: 2em;
+    line-height: 2em;
+    margin: 1em 0;
+}
+
+.event-vs,
+.event-date,
+.event-time,
+.event-place {
+    color: #2ea043;
+}
+
+
 
 #game-conditions {
     grid-column: 1 / -1;
@@ -243,9 +260,9 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 0.5em;
-    background-color: #2a2a2a;
+    background: rgba(224, 224, 224, 0.1);
+    backdrop-filter: blur(6px);
     border-radius: 25px;
-    box-shadow: 2px 6px 5px rgba(46, 160, 67, 0.35);
     box-sizing: border-box;
     padding: 1.5em 2em;
 }
@@ -258,7 +275,7 @@ main {
     display: flex;
     align-items: center;
     width: 90%;
-    border: 1px solid #2ea043;
+    border: 2px solid rgba(224, 224, 224, 0.5);
     border-radius: 75px;
     overflow: hidden;
 }
@@ -272,7 +289,7 @@ main {
     flex: 1;
     text-align: center;
     color: #e0e0e0;
-    border-right: 2px solid #2ea043;
+    border-right: 1px solid rgba(224, 224, 224, 0.2);
 }
 
 #liveleness-high {
@@ -282,8 +299,9 @@ main {
 #liveleness-low.active,
 #liveleness-normal.active,
 #liveleness-high.active {
-    background-color: #2ea043;
+    background-color: rgba(224, 224, 224, 0.5);
     color: #ffffff;
+    font-weight: 700;
 }
 
 
