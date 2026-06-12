@@ -96,7 +96,7 @@ function loadSection(section) {
       let calendarTable = `
           <table class="calendar-data-table">
               <tr>
-                  <th>Match Day</th>
+                  <th>Match</th>
                   <th>VS</th>
                   <th>Date</th>
                   <th>Time</th>
