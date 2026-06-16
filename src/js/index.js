@@ -42,11 +42,6 @@ function loadSection(section) {
             <div id="weather-data"></div>
           </div>
 
-          <div id="upcoming-events-holder" class="dashboard-card">
-            <h2 class="card-title">Upcoming events</h2>
-            <ul id="upcoming-events-list"></ul>
-          </div>
-
           <div id="game-conditions" class="dashboard-card">
             <h2 class="card-title">Ball liveliness</h2>
             <div id="ball-liveliness-bar">
@@ -55,10 +50,22 @@ function loadSection(section) {
               <span id="liveleness-high">HIGH</span>
             </div>
           </div>
+
+          <div id="upcoming-events-holder" class="dashboard-card">
+            <div class="events-column">
+              <h2 class="card-title">Past events</h2>
+              <ul id="past-events-list"></ul>
+            </div>
+            <div class="events-column">
+              <h2 class="card-title">Upcoming</h2>
+              <ul id="upcoming-events-list"></ul>
+            </div>
+          </div>
         </div>
         `;
       fetchWeather();
       fetchNextEvents();
+      fetchPastEvents();
       break;
 
     case "players":
@@ -181,6 +188,35 @@ function fetchNextEvents() {
         on <span class="event-date"> ${match.fecha.split("/").slice(0, 2).join("/")} </span>
         at <span class="event-time"> ${match.hora} </span>
         - <span class="event-place"> ${match.lugar} </span>
+      </li>`;
+    });
+  }
+}
+
+//Función para obtener la lista de eventos pasados
+function fetchPastEvents() {
+  const actualDate = new Date();
+  const pastEvents = calendarData
+    .map((matchup) => {
+      const [d, m, y] = matchup.fecha.split("/").map(Number);
+      const [h, min] = matchup.hora.split(":").map(Number);
+      return { ...matchup, dateObj: new Date(y, m - 1, d, h, min) };
+    })
+    .filter((matchup) => matchup.dateObj < actualDate)
+    .sort((a, b) => b.dateObj - a.dateObj)
+    .slice(0, 3);
+
+  const eventList = document.getElementById("past-events-list");
+
+  if (pastEvents.length === 0) {
+    eventList.innerHTML = `<li class="no-events">No past events</li>`;
+  } else {
+    pastEvents.forEach((match) => {
+      const resultClass = match.resultado.startsWith("Win") ? "result-win" : match.resultado.startsWith("Loss") ? "result-loss" : "";
+      eventList.innerHTML += `
+      <li>
+        vs <span class="event-vs"> ${match.vs} </span>
+        - <span class="event-result ${resultClass}"> ${match.resultado} </span>
       </li>`;
     });
   }
