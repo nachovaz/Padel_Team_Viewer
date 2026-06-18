@@ -45,7 +45,7 @@ export const calendarData = [
     fecha: "12/04/2026",
     hora: "10:30",
     lugar: "Home",
-    resultado: "TBD",
+    resultado: "Loss 1-3",
   },
   {
     jornada: 7,
@@ -53,7 +53,7 @@ export const calendarData = [
     fecha: "19/04/2026",
     hora: "11:00",
     lugar: "Away",
-    resultado: "TBD",
+    resultado: "Tie 2-2",
   },
   {
     jornada: 8,
