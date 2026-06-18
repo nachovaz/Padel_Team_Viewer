@@ -167,7 +167,7 @@ function fetchNextEvents() {
     })
     .filter((matchup) => matchup.dateObj >= actualDate)
     .sort((a, b) => a.dateObj - b.dateObj)
-    .slice(0, 3);
+    .slice(0, 4);
 
   const eventList = document.getElementById("upcoming-events-list");
 

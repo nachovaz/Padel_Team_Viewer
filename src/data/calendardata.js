@@ -10,7 +10,7 @@ export const calendarData = [
   {
     jornada: 2,
     vs: "GLS",
-    fecha: "08/02/2026",
+    fecha: "08/07/2026",
     hora: "10:30",
     lugar: "Home",
     resultado: "Win 4-0",
