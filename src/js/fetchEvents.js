@@ -22,10 +22,12 @@ export function fetchNextEvents() {
     upcomingEvents.forEach((match) => {
       eventList.innerHTML += `
       <li>
-        vs <span class="event-vs"> ${match.vs} </span>
-        on <span class="event-date"> ${match.fecha.split("/").slice(0, 2).join("/")} </span>
-        at <span class="event-time"> ${match.hora} </span>
-        - <span class="event-place"> ${match.lugar} </span>
+        <span class="event-vs"> ${match.vs} </span>
+        <span class="event-info">
+          <span class="event-date"> ${match.fecha.split("/").slice(0, 2).join("/")} </span>
+         - <span class="event-time"> ${match.hora} </span>
+         // <span class="event-place"> ${match.lugar} </span>
+        </span>
       </li>`;
     });
   }
@@ -37,7 +39,7 @@ export function fetchPastEvents() {
     .map(parseMatchDate)
     .filter((matchup) => matchup.dateObj < actualDate)
     .sort((a, b) => b.dateObj - a.dateObj)
-    .slice(0, 3);
+    .slice(0, 4);
 
   const eventList = document.getElementById("past-events-list");
 
@@ -51,12 +53,12 @@ export function fetchPastEvents() {
       } else if (match.resultado.startsWith("Loss")) {
         resultClass = "result-loss";
       } else {
-        resultClass = "";
+        resultClass = "result-tie";
       }
       eventList.innerHTML += `
       <li>
         <span class="event-vs"> ${match.vs} </span>
-        - <span class="event-result ${resultClass}"> ${match.resultado} </span>
+        <span class="event-result ${resultClass}"> ${match.resultado} </span>
       </li>`;
     });
   }

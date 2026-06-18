@@ -47,7 +47,3 @@ function loadSection(section) {
       break;
   }
 }
-
-
-
-

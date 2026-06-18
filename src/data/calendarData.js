@@ -37,7 +37,7 @@ export const calendarData = [
     fecha: "22/03/2026",
     hora: "10:30",
     lugar: "Home",
-    resultado: "Loss 0-4",
+    resultado: "Win 4-0",
   },
   {
     jornada: 6,
