@@ -6,8 +6,10 @@ import { renderCalendar } from "./views/calendar.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   const homeBtn = document.getElementById("home-button");
-  homeBtn.addEventListener("click", () => loadSection("home"));
-  if (homeBtn) homeBtn.click();
+  if (homeBtn) {
+    homeBtn.addEventListener("click", () => loadSection("home"));
+    homeBtn.click();
+  }
   document
     .getElementById("players-button")
     .addEventListener("click", () => loadSection("players"));

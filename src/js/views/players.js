@@ -2,6 +2,7 @@ import { playerData } from "../../data/playerData.js";
 
 export function renderPlayers() {
   let html = `
+    <div class="table-container">
     <table class="data-table">
       <tr>
         <th>ID</th>
@@ -29,6 +30,6 @@ export function renderPlayers() {
     `;
   });
 
-  html += `</table>`;
+  html += `</table></div>`;
   return html;
 }

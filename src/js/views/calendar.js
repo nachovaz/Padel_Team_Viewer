@@ -2,6 +2,7 @@ import { calendarData } from "../../data/calendarData.js";
 
 export function renderCalendar() {
   let html = `
+    <div class="table-container">
     <table class="data-table">
       <tr>
         <th>Match</th>
@@ -26,6 +27,6 @@ export function renderCalendar() {
     `;
   });
 
-  html += `</table>`;
+  html += `</table></div>`;
   return html;
 }
