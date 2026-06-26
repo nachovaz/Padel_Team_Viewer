@@ -8,7 +8,7 @@ export function renderHome() {
       </div>
 
       <div id="game-conditions" class="dashboard-card">
-        <h2 class="card-title">Play conditions</h2>
+        <h2 class="card-title">Ball conditions</h2>
         <div id="ball-liveliness-bar">
           <span id="liveliness-low">LOW</span>
           <span id="liveliness-normal">NORMAL</span>
