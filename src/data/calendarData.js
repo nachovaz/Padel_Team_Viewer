@@ -58,7 +58,7 @@ export const calendarData = [
   {
     jornada: 8,
     vs: "Norpadel",
-    fecha: "15/07/2026",
+    fecha: "15/12/2026",
     hora: "10:30",
     lugar: "Home",
     resultado: "TBD",
@@ -66,7 +66,7 @@ export const calendarData = [
   {
     jornada: 9,
     vs: "SAMO",
-    fecha: "20/07/2026",
+    fecha: "20/11/2026",
     hora: "19:00",
     lugar: "Away",
     resultado: "TBD",
