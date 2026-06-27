@@ -57,7 +57,7 @@ Un navegador web moderno (Chrome, Firefox, Safari, Edge). No hacen falta herrami
 ### Instalación
 
 ```bash
-git clone https://github.com/nachovaz/padelteamviewer.git
+git clone https://github.com/nachovaz/Padel_Team_Viewer.git
 cd PadelTeamViewer
 ```
 
@@ -176,7 +176,7 @@ A modern web browser (Chrome, Firefox, Safari, Edge). No build tools or servers 
 ### Installation
 
 ```bash
-git clone https://github.com/nachovaz/padelteamviewer.git
+git clone https://github.com/nachovaz/Padel_Team_Viewer.git
 cd PadelTeamViewer
 ```
 
