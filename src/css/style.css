@@ -100,7 +100,12 @@ header {
     background-color: var(--background-dark);
     color: var(--text-light);
     gap: 1em;
+    margin-left: 1em;
     padding: 0 1em;
+}
+
+.header-title h1 {
+    cursor: pointer;
 }
 
 .header-team-name {
@@ -200,7 +205,7 @@ main {
     align-items: center;
     padding: 0.5em 0;
     gap: 0.5em;
-    margin-top: 5em;
+    margin: 5em auto 0;
 }
 
 .weather-temp {
@@ -357,6 +362,11 @@ footer {
     border-top: 2px solid var(--primary-color);
 }
 
+footer p{
+    font-family: "Permanent Marker", cursive;
+    font-size: 1.5rem;
+}
+
 /* ===== Media Queries ===== */
 
 @media (max-width: 768px) {
@@ -409,13 +419,15 @@ footer {
     .header-title {
         flex-direction: row;
         align-items: center;
+        font-size: 1rem;
         justify-content: flex-start;
-        height: 60px;
+        height: 90px;
         padding: 0.5em;
+        width: 85%;
     }
 
     .header-team-name {
-        font-size: 1.2rem;
+        font-size: 1rem;
         border-left: 1px solid var(--primary-color);
         padding-left: 0.7em;
     }
@@ -483,11 +495,23 @@ footer {
 
     #game-conditions h2 {
         margin-bottom: 1em;
+        line-height: 1.25;
     }
-    
+
+    footer p {
+        font-size: 1rem;
+    }
 }
 
 @media (min-width: 2560px) {
+
+    header {
+        height: 90px;
+    }
+
+    .header-title {
+        margin-left: 1em ;
+    }
     body {
         font-size: 1.15rem;
     }
@@ -513,7 +537,16 @@ footer {
         font-size: 4rem;
     }
 
-    #upcoming-events-list {
+    #upcoming-events-list,
+    #past-events-list {
         font-size: 2.5rem;
+    }
+
+    #ball-liveliness-bar{
+        margin: auto ;
+    }
+
+    #game-conditions h2 {
+        margin-bottom: 0;
     }
 }

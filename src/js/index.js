@@ -10,6 +10,7 @@ window.addEventListener("DOMContentLoaded", () => {
     homeBtn.addEventListener("click", () => loadSection("home"));
     homeBtn.click();
   }
+  document.querySelector(".header-title h1").addEventListener("click", () => loadSection("home"));
   document
     .getElementById("players-button")
     .addEventListener("click", () => loadSection("players"));
