@@ -8,7 +8,7 @@ export function renderPlayers() {
         <th>ID</th>
         <th>Name</th>
         <th>Played matches</th>
-        <th>Playoff Locked</th>
+        <th>Available for playoff</th>
       </tr>
   `;
 

@@ -2,14 +2,14 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-Aplicación de página única para gestionar un equipo de pádel. Muestra el clima, el estado del juego, la plantilla de jugadores y el calendario de partidos.
+Aplicación para visualizar datos de un equipo de pádel. Muestra el clima, condiciones de salida de bola, resultados pasados, la plantilla de jugadores y el calendario de partidos.
 
 ## Características
 
-- **Clima y estado del juego** — Obtiene el tiempo en tiempo real desde la API de Open-Meteo y calcula el comportamiento de la pelota (baja / normal / alta vivacidad).
-- **Plantilla de jugadores** — Consulta la plantilla completa con historial de partidos y estado de bloqueo para playoff.
-- **Calendario de partidos** — Próximos encuentros y resultados anteriores (victoria / derrota / empate).
-- **Diseño responsive** — Optimizado para escritorio, tablet, móvil y pantallas ultra anchas (a partir de 2560px).
+- **Clima y estado del juego** — Obtiene los datos del tiempo desde la API de Open-Meteo y calcula una aproximación de la salida de bola (baja / normal / alta).
+- **Plantilla de jugadores** — Consulta de la plantilla completa y los números de licencia (útil para capitanes).
+- **Calendario de partidos** — Próximos encuentros y resultados anteriores.
+- **Diseño responsive** — Optimizada para diferentes tamaños de pantalla.
 
 ## Captura
 
@@ -17,12 +17,12 @@ Aplicación de página única para gestionar un equipo de pádel. Muestra el cli
 
 ## Tecnologías
 
-- **HTML5** — Marcado semántico
-- **CSS3** — CSS Grid, Flexbox, propiedades personalizadas, media queries responsive
-- **Vanilla JavaScript** — Módulos ES, sin frameworks
-- **Open-Meteo API** — Datos meteorológicos gratuitos, sin necesidad de clave API
-- **Font Awesome** — Iconos
-- **Google Fonts** — Roboto & Permanent Marker
+- **HTML5**
+- **CSS3** 
+- **Vanilla JavaScript** 
+- **Open-Meteo API** 
+- **Font Awesome** 
+- **Google Fonts** 
 
 ## Estructura del proyecto
 
@@ -52,7 +52,7 @@ PadelTeamViewer/
 
 ### Requisitos
 
-Un navegador web moderno (Chrome, Firefox, Safari, Edge). No hacen falta herramientas de compilación ni servidores — funciona directamente desde el sistema de archivos.
+Un navegador web moderno (Chrome, Firefox, Safari, Edge).
 
 ### Instalación
 
@@ -65,14 +65,26 @@ A continuación abre `index.html` en tu navegador.
 
 ### Desarrollo local
 
-Para una experiencia óptima, sirve el proyecto con un servidor HTTP local (necesario para que los módulos ES funcionen con `fetch`):
+Los módulos ES (`import`/`export`) no funcionan con el protocolo `file://` por políticas CORS del navegador. Necesitas un servidor HTTP local.
+
+#### Opción A — Python (incluido en el sistema)
 
 ```bash
-# Con Python
-python -m http.server -d /ruta/hacia/PadelTeamViewer
-
-# Con la extensión Live Server de VS Code
+python -m http.server 8000
+# Abre http://localhost:8000
 ```
+
+#### Opción B — Node.js
+
+```bash
+npx serve .
+# o bien
+npx http-server .
+```
+
+#### Opción C — VS Code
+
+Instala la extensión **Live Server** (ritwickdey.LiveServer), haz clic derecho sobre `index.html` y selecciona *"Open with Live Server"*.
 
 ## Personalización
 
@@ -80,7 +92,7 @@ python -m http.server -d /ruta/hacia/PadelTeamViewer
 
 Edita el nombre del equipo en `index.html`:
 
-```html
+```html Line 41
 <span class="header-team-name">Padel Oviedo B</span>
 ```
 
@@ -184,14 +196,26 @@ Then open `index.html` in your browser.
 
 ### Local development
 
-For the best experience, serve the project with a local HTTP server (needed for ES modules to work with `fetch`):
+ES modules (`import`/`export`) don't work with the `file://` protocol due to browser CORS policies. You need a local HTTP server.
+
+#### Option A — Python (built-in)
 
 ```bash
-# Using Python
-python -m http.server -d /path/to/PadelTeamViewer
-
-# Using VS Code Live Server extension
+python -m http.server 8000
+# Open http://localhost:8000
 ```
+
+#### Option B — Node.js
+
+```bash
+npx serve .
+# or
+npx http-server .
+```
+
+#### Option C — VS Code
+
+Install the **Live Server** extension (ritwickdey.LiveServer), right-click `index.html`, and select *"Open with Live Server"*.
 
 ## Customization
 
