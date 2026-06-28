@@ -1,3 +1,5 @@
+//Change these data to match your team's players. You can add or remove players as needed.
+
 export const playerData = [
   {
     id: 254763,

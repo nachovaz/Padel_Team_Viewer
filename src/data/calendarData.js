@@ -1,3 +1,5 @@
+//Change these data to match your team's calendar. You can add or remove matches as needed.
+
 export const calendarData = [
   {
     jornada: 1,
